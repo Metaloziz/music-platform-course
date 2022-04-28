@@ -1,5 +1,16 @@
 @import "style/mixin";
 
-.title {
+.container {
   @include ContentCenter();
+
+  Card {
+    width: 90vw;
+  }
+
+  .track {
+    display: flex;
+    padding: 0 20px 0 20px;
+    justify-content: space-between;
+    width: 60vw;
+  }
 }
