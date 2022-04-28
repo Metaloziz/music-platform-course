@@ -1,0 +1,6 @@
+@import "style/mixin";
+
+
+.center {
+  @include ContentCenter();
+}

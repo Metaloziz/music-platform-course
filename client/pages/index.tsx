@@ -1,30 +1,21 @@
+import {Button} from '@mui/material';
 import React from 'react';
-import {Button} from "@material-ui/core";
-import Navbar from "../components/Navbar";
+import style from './index.module.scss'
 import MainLayout from "../layouts/MainLayout";
 
 const Index = () => {
-    return (
-        <>
-            <MainLayout>
-                <div className="center">
-                    <h1>Добро пожаловать!</h1>
-                    <h3>Здесь собраны лучшие треки!</h3>
-                </div>
-            </MainLayout>
 
-            <style jsx>
-                {`
-                    .center {
-                        margin-top: 150px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                `}
-            </style>
-        </>
-    );
+  return (
+    <>
+      <MainLayout>
+        <div className={style.center}>
+          <h1>Hello !</h1>
+          <h2>it is SpotiFy from BY</h2>
+          <Button>random</Button>
+        </div>
+      </MainLayout>
+    </>
+  );
 };
 
-export default Index;
+export default Index
