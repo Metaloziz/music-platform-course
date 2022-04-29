@@ -17,11 +17,12 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import {useRouter} from "next/router";
+import {Path} from "../../enums/enums";
 
 const menuItems = [
-  {name: 'Main', href: '/'},
-  {name: 'Tracks', href: '/tracks'},
-  {name: 'Albums', href: '/albums'},
+  {name: 'Main', href: Path.MAIN},
+  {name: 'Tracks', href: Path.TRACKS},
+  {name: 'Albums', href: Path.ALBUMS},
 ]
 
 const drawerWidth = 240;

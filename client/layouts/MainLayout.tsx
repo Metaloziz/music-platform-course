@@ -1,5 +1,5 @@
 import {FC, ReactNode} from "react";
-import Navigation from "../components/Navigation";
+import Navigation from "../components/Navigation/Navigation";
 
 type Children = {
   children?: ReactNode
