@@ -3,6 +3,7 @@
 
 .container {
   @include ContentCenter();
+  gap: 20px;
   //max-width: 80vw;
 
   Button {
@@ -12,18 +13,34 @@
 
   .card {
     display: flex;
+    align-items: center;
+    gap: 10px;
     width: 60vw;
     padding: 5px;
   }
 
   .description {
+    padding: 5px;
     display: flex;
     flex-direction: column;
+    width: 60vw;
 
     div {
-      width: 60vw;
+
     }
 
   }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60vw;
+  }
+
+  .comments {
+    width: 60vw;
+  }
+
 
 }

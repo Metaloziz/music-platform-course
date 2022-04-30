@@ -15,5 +15,5 @@ export type ITrack = {
   listens: number
   picture: StaticImageData
   audio: string
-  comment: IComment[]
+  comments: IComment[]
 }

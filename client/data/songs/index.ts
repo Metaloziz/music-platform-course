@@ -10,7 +10,11 @@ export const songs: ITrack[] = [
     name: 'Deutschland',
     text: 'qwe',
     picture: avatar,
-    comment: []
+    comments: [
+      {_id: '1', username: 'Andrew', text: 'coooool'},
+      {_id: '2', username: 'Alex', text: 'coooooooool'},
+      {_id: '3', username: 'Mixa', text: 'coooooooooooool'}
+    ]
   },
   {
     _id: '2',
@@ -20,6 +24,6 @@ export const songs: ITrack[] = [
     name: 'Angel',
     text: 'qwe',
     picture: avatar,
-    comment: []
+    comments: []
   },
 ]
