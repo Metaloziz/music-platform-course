@@ -6,15 +6,10 @@ import StepWrapper from "../../../components/StepWrapper/StepWrapper";
 const Create = () => {
   return (
     <MainLayout>
-      <div>
-
-        <StepWrapper activeStep={1}>
-          <h1>Created</h1>
-        </StepWrapper>
-
-      </div>
+      <StepWrapper/>
     </MainLayout>
   );
 };
+
 
 export default Create
