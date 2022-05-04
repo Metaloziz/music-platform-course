@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -27,14 +27,18 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const steps = ['Information about track', 'Download picture', 'Download track'];
 
-const getStepContent = (step: number) => {
+const getStepContent = (step: number, setPicture: Function, setAudio: Function) => {
   switch (step) {
     case 0:
       return <InputsTrackData/>;
     case 1:
-      return <FileUpload file={''} setFile={() => ({})}/>;
+      return <FileUpload setFile={setPicture} accept={'image/*'}>
+        <Button>Download picture</Button>
+      </FileUpload>;
     case 2:
-      return <h1>This is the bit I really care about!</h1>;
+      return <FileUpload setFile={setAudio} accept={'audio/*'}>
+        <Button>Download audio</Button>
+      </FileUpload>;
     default:
       return <h1>Unknown step</h1>;
   }
@@ -43,6 +47,10 @@ const getStepContent = (step: number) => {
 const StepWrapper: FC = () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
+
+  const [picture, setPicture] = useState(null)
+  const [audio, setAudio] = useState(null)
+
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -81,7 +89,7 @@ const StepWrapper: FC = () => {
         ) : (
           <div>
             <Typography
-              className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+              className={classes.instructions}>{getStepContent(activeStep, setPicture, setAudio)}</Typography>
             <div>
               <Button disabled={activeStep === 0}
                       onClick={handleBack}
