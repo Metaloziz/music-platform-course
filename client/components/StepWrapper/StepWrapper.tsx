@@ -5,6 +5,9 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import InputsTrackData
+  from "../../pages/tracks/create/steps/InputsTrackData/InputsTrackData";
+import FileUpload from "../../pages/tracks/create/steps/FileUpload/FileUpload";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -27,9 +30,9 @@ const steps = ['Information about track', 'Download picture', 'Download track'];
 const getStepContent = (step: number) => {
   switch (step) {
     case 0:
-      return <h1>First step</h1>;
+      return <InputsTrackData/>;
     case 1:
-      return <h1>What is an ad group anyways?</h1>;
+      return <FileUpload file={''} setFile={() => ({})}/>;
     case 2:
       return <h1>This is the bit I really care about!</h1>;
     default:
